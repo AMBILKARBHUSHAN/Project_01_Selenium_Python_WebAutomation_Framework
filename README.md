@@ -116,7 +116,7 @@ pytest -v -s -n=3 --browser chrome --html=reports/report.html
 - Expand framework for API testing along with UI tests.
 ## Authors
 
-- 👨‍Author
+- ‍Author
 
 Developed by Bhushan 
 
