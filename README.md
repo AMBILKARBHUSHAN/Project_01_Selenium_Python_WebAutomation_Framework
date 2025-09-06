@@ -114,11 +114,9 @@ pytest -v -s -n=3 --browser chrome --html=reports/report.html
 - Implement Data Driven Testing using Excel (openpyxl).
 
 - Expand framework for API testing along with UI tests.
-## Authors
+## Author
 
-- ‍Author
-
-Developed by Bhushan 
+Developed By :-  Bhushan Ambilkar
 
 Contact: bhushanambilkar25@gmail.com
 
