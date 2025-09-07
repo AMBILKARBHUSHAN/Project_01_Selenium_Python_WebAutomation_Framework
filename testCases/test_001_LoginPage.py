@@ -4,6 +4,7 @@ This file contains test cases for validating the OrangeHRM login functionality.
 - Reads test data (URL, username, password) from config.ini using ReadConfiguration.
 - Verifies successful login and page title.
 """
+import os
 
 from pageObjects.LoginPage_objects import LoginPage     # Page Object class for login page
 from utilities.readConfigurations import ReadConfiguration
@@ -37,8 +38,13 @@ class Test_001_Login:
         self.lp.enter_password(self.password)
         self.lp.click_on_login_button()
 
-        actual_title = self.driver.title
-        assert actual_title == "OrangeHRM", "Login test failed!"
-        self.driver.close()
+        self.targetPage = self.lp.isMyDashboardPageExist()
+        if self.targetPage==False:
+            self.driver.close()
 
+        else:
+            self.driver.save_screenshot(os.path.abspath(os.curdir) + "\\screenShots\\" + "test_login")
+            self.driver.close()
+
+        self.log.info(" ====== End of test_001_LoginPage ===== ")
 

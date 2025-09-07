@@ -17,6 +17,7 @@ class LoginPage:
     username_xpath = "//input[@name='username']"
     password_xpath = "//input[@type='password']"
     login_button_xpath = "//button[@type='submit']"
+    dashboard_xpath = "//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name'][normalize-space()='Dashboard']"
 
     def __init__(self, driver):                       # Constructor to initialize WebDriver instance
         self.driver = driver
@@ -29,3 +30,9 @@ class LoginPage:
 
     def click_on_login_button(self):                  # Method to click on the login button
         self.driver.find_element(By.XPATH, self.login_button_xpath).click()
+
+    def isMyDashboardPageExist(self):
+        try:
+            self.driver.find_element(By.XPATH, self.dashboard_xpath).is_displayed()
+        except:
+            return False
