@@ -117,6 +117,6 @@ pytest -v -s -n=3 --browser chrome --html=reports/report.html
 
 Developed By :-  Bhushan Ambilkar
 
-Contact: bhushanambilkar25@gmail.com
+Contact: ambilkarbhushan25@gmail.com
 
 This project is open for learning and contributions. Feel free to fork and enhance it.
